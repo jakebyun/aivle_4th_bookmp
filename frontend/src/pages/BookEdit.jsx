@@ -1,3 +1,5 @@
+// src/pages/BookEdit.jsx
+
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import BookForm from '../components/BookForm';
@@ -9,7 +11,8 @@ function BookEdit() {
   const navigate = useNavigate()
   const [book, setBook] = useState(null);
   useEffect(() => {
-    getBook(id).then((res) => setBook(res.data))
+    getBook(id).then((res) => setBook(res.data.data))
+    // getBook(id).then((res) => setBook(res.data))
   }, [id]);
 
   const handleSubmit = async (updatedBook) => {
