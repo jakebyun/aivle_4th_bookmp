@@ -129,12 +129,6 @@ function BookEdit() {
         ) : (
             <BookForm initialValues={book} onSubmit={handleSubmit} />
         )}
-
-        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
-          <Button variant="outlined" onClick={() => navigate(`/books/${id}`)}>
-            상세 페이지로 돌아가기
-          </Button>
-        </Box>
       </Box>
   );
 }
