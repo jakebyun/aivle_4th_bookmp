@@ -1,17 +1,29 @@
 spring:
   datasource:
-   driver-class-name: org.h2.Driver
-   url: jdbc:h2:~/library
-   username: sa
-   password: 1234
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/library
+    username: sa
+    password: 1234
+
   h2:
     console:
-     enabled: true
-     path: /h2-console
+      enabled: true
+      path: /h2-console
+
   jpa:
-   hibernate:
-     ddl-auto: none
-   show-sql: true
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
   sql:
     init:
       mode: always
+      encoding: UTF-8
+
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  main:
+    allow-bean-definition-overriding: true
